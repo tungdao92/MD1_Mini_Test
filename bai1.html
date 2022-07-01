@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập tuổi của người em:</h1><input type="number" id="tuoi">
+<button onclick="xemTuoi()">Xem tuổi của bố và anh</button>
+<h1>Tuổi của người anh: <span id="tuoianh"></span></h1>
+<h1>Tuổi của người bố: <spa id="tuoibo"></spa></h1>
+
+<script>
+    function xemTuoi() {
+        let tuoiem=+document.getElementById('tuoi').value;
+        let tuoianh=tuoiem+3;
+        document.getElementById('tuoianh').innerHTML=tuoianh;
+        let tuoibo=tuoianh*6;
+        document.getElementById('tuoibo').innerHTML=tuoibo;
+
+    }
+    function enter(abc) {
+        switch (abc.keyCode){
+            case 13:
+                xemTuoi()
+                break;
+        }
+
+    }
+    window.addEventListener('keydown',enter)
+</script>
+</script>
+</body>
+</html>

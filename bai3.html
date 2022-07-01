@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let namsinh=+prompt('Nhập năm sinh','')
+    let can=namsinh%10
+    let chi=namsinh%12
+    let truoc="";
+    let sau="";
+    if (namsinh>0) {
+        switch (can) {
+            case 0:
+                truoc = "Canh"
+                break;
+            case 1:
+                truoc = "Tân"
+                break;
+            case 2:
+                truoc = "Nhâm"
+                break;
+            case 3:
+                truoc = "Quý"
+                break;
+            case 4:
+                truoc = "Giáp"
+                break;
+            case 5:
+                truoc = "Ất"
+                break;
+            case 6:
+                truoc = "Bính"
+                break;
+            case 7:
+                truoc = "Đinh"
+                break;
+            case 8:
+                truoc = "Mậu"
+                break;
+            case 9:
+                truoc = "Kỷ"
+                break;
+        }
+        switch (chi) {
+            case 0:
+                sau = "Thân"
+                break;
+            case 1:
+                sau = "Dậu"
+                break;
+            case 2:
+                sau = "Tuất"
+                break;
+            case 3:
+                sau = "Hợi"
+                break;
+            case 4:
+                sau = "Tý"
+                break;
+            case 5:
+                sau = "Sửu"
+                break;
+            case 6:
+                sau = "Dần"
+                break;
+            case 7:
+                sau = "Mão"
+                break;
+            case 8:
+                sau = "Thìn"
+                break;
+            case 9:
+                sau = "Tỵ"
+                break;
+            case 10:
+                sau = "Ngọ"
+                break;
+            case 11:
+                sau = "Mùi"
+                break;
+
+        }
+        alert(truoc + ' ' + sau)
+    } else {
+        alert('Không phải năm')
+    }
+</script>
+
+</body>
+</html>

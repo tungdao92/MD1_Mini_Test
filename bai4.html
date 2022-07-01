@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="anh1" src="img/dung.jpg" style="width: 200px;height: 200px;position: relative;top:0px;left: 0px">
+<img id="anh2" src="img/diep.jpg" style="width: 200px;height: 200px;position:absolute;top:500px;left: 500px">
+
+<!--<table style="text-align: center;position: relative;left: 1000px;background-color: deepskyblue;border-radius: 50%">-->
+<!--    <tr>-->
+<!--        <td colspan="2"><h3>Di chuyển ảnh Dũng</h3></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td colspan="2"><button onclick="diLen()">Đi lên</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><button onclick="quaTrai()">Qua trái</button></td>-->
+<!--        <td><button onclick="quaPhai()">Quá phải</button></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td colspan="2"><button onclick="diXuong()" >Đi xuống</button></td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<script>
+    let dung=document.getElementById('anh1');
+    function diLen() {
+        dung.style.top=parseInt(dung.style.top) - 20 + 'px';
+    }
+    function diXuong() {
+        dung.style.top=parseInt(dung.style.top) + 20 + 'px';
+    }
+    function quaTrai() {
+        dung.style.left=parseInt(dung.style.left) - 20 + 'px';
+    }
+    function quaPhai() {
+        dung.style.left=parseInt(dung.style.left) + 20 + 'px';
+    }
+    function banPhim(abc) {
+        switch (abc.keyCode){
+            case 38:
+                diLen()
+                break;
+            case 40:
+                diXuong()
+                break;
+            case 37:
+                quaTrai()
+                break;
+            case 39:
+                quaPhai()
+                break;
+        }
+    }
+    window.addEventListener('keydown',banPhim);
+</script>
+
+</body>
+</html>
