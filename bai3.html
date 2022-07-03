@@ -6,13 +6,13 @@
 </head>
 <body>
 <script>
-    let namsinh = +prompt('Nhập năm sinh', '')
-    let can = namsinh % 10
-    let chi = namsinh % 12
+    let namSinh = +prompt('Nhập năm sinh', '')
+    let can = namSinh % 10
+    let chi = namSinh % 12
     let truoc = "";
     let sau = "";
-    if (namsinh > 0) {
-        if (Number.isInteger(namsinh)) {
+    if (namSinh > 0) {
+        if (Number.isInteger(namSinh)) {
             switch (can) {
                 case 0:
                     truoc = "Canh"
