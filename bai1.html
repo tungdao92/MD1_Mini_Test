@@ -9,14 +9,19 @@
 <button onclick="xemTuoi()">Xem tuổi của bố và anh</button>
 <h1>Tuổi của người anh: <span id="tuoianh"></span></h1>
 <h1>Tuổi của người bố: <spa id="tuoibo"></spa></h1>
+<h1 id="tuoiem"></h1>
 
 <script>
     function xemTuoi() {
         let tuoiem=+document.getElementById('tuoi').value;
         let tuoianh=tuoiem+3;
-        document.getElementById('tuoianh').innerHTML=tuoianh;
         let tuoibo=tuoianh*6;
-        document.getElementById('tuoibo').innerHTML=tuoibo;
+        if (tuoiem>0){
+            document.getElementById('tuoianh').innerHTML= tuoianh
+            document.getElementById('tuoibo').innerHTML=tuoibo
+        } else {
+            alert('Không tồn tại tuổi em.')
+        }
 
     }
     function enter(abc) {
