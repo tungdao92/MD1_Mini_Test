@@ -53,9 +53,19 @@
             case 39:
                 quaPhai()
                 break;
-        }
+        }checkVaCham()
     }
     window.addEventListener('keydown',banPhim);
+    function checkVaCham() {
+        if (parseInt(dung.style.left)+parseInt(dung.style.width)>=parseInt(diep.style.left)&&
+            parseInt(dung.style.left)<=parseInt(diep.style.left)+parseInt(diep.style.width)&&
+            parseInt(dung.style.top)+parseInt(dung.style.height)>=parseInt(diep.style.top) &&
+            parseInt(dung.style.top) <= parseInt(diep.style.top)+parseInt(diep.style.height))
+        {
+            alert('Va cham')
+        }
+        
+    }
 
 </script>
 
